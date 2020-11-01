@@ -1,9 +1,10 @@
-
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 0.9rem;
   text-align: center;
   color: hsl(234, 12%, 34%);
+  background-color: hsl(0, 0%, 98%);
+  margin: 0;
   }
 
 h1 {
@@ -22,8 +23,9 @@ p {
 }
 
 .calculator {
+  box-sizing: border-box;
   width: 350px;
-  height: 200px;
+  height: 220px;
   border-style: solid;
   border-width: 4px 0 0 0;
   border-color: hsl(212, 86%, 64%);
@@ -31,10 +33,6 @@ p {
   background-color: hsl(0, 0%, 98%);
   padding: 5px;
   box-shadow: 0px 10px 14px -10px #888888;
-  position: relative;
-  margin: auto;
-  bottom: 527px;
-  left:385px;
   text-align: left;
   }
 
@@ -44,15 +42,9 @@ p {
   margin:0;
   }
 
-.container {
-  background-color: hsl(0, 0%, 98%);
-  width: 1440px;
-  padding-top: 60px;
-  margin: auto;
-  }
-
 .first-heading {
   font-weight: lighter;
+  padding: 4% 0 5px 0;
   }
 
 .icon {
@@ -60,14 +52,10 @@ p {
   margin-left: 75%;
   }
 
-.intro-paragraph {
-  margin: 20px auto 70px auto;
-  width: 35%;
-  }
-
 .karma {
+  box-sizing: border-box;
   width: 350px;
-  height: 200px;
+  height: 220px;
   border-style: solid;
   border-width: 4px 0 0 0;
   border-color: hsl(34, 97%, 64%);
@@ -75,15 +63,13 @@ p {
   background-color: hsl(0, 0%, 98%);
   padding: 5px;
   box-shadow: 0px 10px 17px -10px #888888;
-  position: relative;
-  margin: auto;
-  bottom: 190px;
   text-align: left;
   }
 
 .supervisor {
+  box-sizing: border-box;
   width: 350px;
-  height: 200px;
+  height: 220px;
   border-style: solid;
   border-width: 4px 0 0 0;
   border-color: hsl(180, 62%, 55%);
@@ -91,16 +77,13 @@ p {
   background-color: hsl(0, 0%, 98%);
   padding: 5px;
   box-shadow: 0px 10px 17px -10px #888888;
-  position: relative;
-  margin: auto;
-  bottom: 100px;
-  right: 385px;
   text-align: left;
   }
 
 .team-builder {
+  box-sizing: border-box;
   width: 350px;
-  height: 200px;
+  height: 220px;
   border-style: solid;
   border-width: 4px 0 0 0;
   border-color: hsl(0, 78%, 62%);
@@ -108,7 +91,122 @@ p {
   background-color: hsl(0, 0%, 98%);
   padding: 5px;
   box-shadow: 0px 10px 17px -10px #888888;
-  margin: auto;
-  position: relative;
   text-align: left;
   }
+
+  @media screen and (max-width: 1090px) {   /* This is for mobiles*/
+
+  .grid-container {
+    display: grid;
+    margin: 50px auto;
+    width:350px;
+    height: 100%;
+    column:100%;
+    grid-gap: 25px;
+    background-color: hsl(0, 0%, 98%); /*background color should be hsl(0, 0%, 98%)*/
+    }
+
+  .intro-paragraph {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    }
+
+  .karma {
+    column: 100%;
+    }
+
+  .supervisor {
+    column: 100%;
+    }
+
+  .calculator {
+    column: 100%;
+    }
+
+  .team-builder {
+    column: 100%;
+    }
+}
+
+@media screen and (min-width: 1090px) { /* This is for larger screens*/
+
+.grid-container {
+  display: grid;
+  margin: 50px auto;
+  width:1090px;
+  height: 100%;
+  grid-template-column:350px 350px 350px;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-gap: 25px;
+  background-color: hsl(0, 0%, 98%); /*background color should be hsl(0, 0%, 98%)*/
+  }
+
+.intro-paragraph {
+  width: 27%;
+  margin: auto;
+  padding: 20px 0;
+  }
+
+.karma {
+  grid-column: 2;
+  grid-row: 3 / 4;
+  box-sizing: border-box;
+  width: 350px;
+  height: 220px;
+  border-style: solid;
+  border-width: 4px 0 0 0;
+  border-color: hsl(34, 97%, 64%);
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px;
+  box-shadow: 0px 10px 17px -10px #888888;
+  text-align: left;
+  }
+
+.supervisor {
+  grid-column: 1;
+  box-sizing: border-box;
+  width: 350px;
+  height: 220px;
+  border-style: solid;
+  border-width: 4px 0 0 0;
+  border-color: hsl(180, 62%, 55%);
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px;
+  box-shadow: 0px 10px 17px -10px #888888;
+  text-align: left;
+  }
+
+.calculator {
+  grid-column: 3;
+  box-sizing: border-box;
+  width: 350px;
+  height: 220px;
+  border-style: solid;
+  border-width: 4px 0 0 0;
+  border-color: hsl(212, 86%, 64%);
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px;
+  box-shadow: 0px 10px 14px -10px #888888;
+  text-align: left;
+  }
+
+.team-builder {
+  grid-column: 2;
+  box-sizing: border-box;
+  width: 350px;
+  height: 220px;
+  border-style: solid;
+  border-width: 4px 0 0 0;
+  border-color: hsl(0, 78%, 62%);
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px;
+  box-shadow: 0px 10px 17px -10px #888888;
+  text-align: left;
+  }
+
+}
